@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='p-6'>
+      <nav className='pt-6 pb-0'>
         <div className='flex justify-around'>
              {/* Mobile Menu Button */}
              <button   onClick={() => setIsopen(!isOpen)} className='md:hidden block  text-3xl purple'>
