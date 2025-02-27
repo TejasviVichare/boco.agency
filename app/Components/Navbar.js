@@ -29,8 +29,8 @@ const Navbar = () => {
             <div className='hidden md:flex  space-x-6 purple border  border-indigo-200 rounded-full p-4 px-6'>
                 <Link href="/" className='text-lg font-semibold'>Shopify store build</Link>
                 <Link href="/" className='text-lg font-semibold'>Landing page design</Link>
-                <Link href="/" className='text-lg font-semibold'>Case studies</Link>
-            </div>    
+                <Link href="/case-studies" className='text-lg font-semibold'>Case Studies</Link>
+                </div>    
               <div className='hidden md:flex'>
                <Talktous text="Talk to Us" />
               </div>       

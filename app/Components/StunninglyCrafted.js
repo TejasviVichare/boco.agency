@@ -5,7 +5,7 @@ import StunninglyCraftedSlider from './StunninglyCraftedSlider'
 const StunninglyCrafted = () => {
   return (
     <>
-      <div className='w-full justify-center text-center pt-10'>
+      <div className='w-full justify-center md:text-center text-left pl-3 pt-10'>
       <Heading heading={<>Stunningly Crafted Shopify Solutions <br /> Driven by Insights</>} />
       <p className="pt-10 font-medium purple text-lg md:text-xl mb-10">
       As Shopify Partners and a leading eCommerce Web Design Agency, we empower brands to thrive <br />

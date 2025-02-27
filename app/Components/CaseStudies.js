@@ -1,31 +1,64 @@
+'use client'
 import React from 'react'
 import Image from 'next/image';
-import CaseStudies1 from '../../public/assets/CaseStudies1.png';
-import CaseStudies2 from '../../public/assets/CaseStudies2.png';
 import Heading from './Heading';
-import { Butcherman } from 'next/font/google';
 import Button from './Button';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 const CaseStudies = () => {
+
+ const images = [
+    '/assets/CaseStudies1.png',
+    '/assets/CaseStudies2.png'
+ ]
+ const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+ }
   return (
     <>
-    <div className='w-full md:px-32 pt-20 justify-center text-center'>
-        <Heading heading="Read our recent Case Studies"/>
-        <div className='flex md:flex-row  flex-col gap-14 pt-10 '>
-            <div>
-                <Image src={CaseStudies1} alt="Image" />
-            </div>
-            <div>
-                <Image src={CaseStudies2} alt="Image" />
+    <div className='w-full md:px-32 md:pt-14 justify-center text-center'>
+       
 
-            </div>
+        {/* Desktop View */}
+        <div className='hidden  md:flex flex-row   gap-14 pt-5 justify-center'>
+            {images.map((image, id) =>(
+             <div key={id}>
+                <Image src={image} alt="Image" width={500} height={500} />
+             </div>
+            ))
+            }
         </div>
-        <div className='w-60 text-center justify-center'>
-            <Button text="View Case Studies"/>
-        </div>
-    </div>
    
+     {/* Mobile View */}
+    <div className='md:hidden   gap-14 pt-14 justify-center mx-4'>
+        <Slider {...settings}>
+            {images.map((image, id)=>(
+                <div key={id}>
+                    <Image src={image} alt="Image" width={400} height={450} 
+                       className="w-full" />
+                </div>
+            ))
 
+            }
+        </Slider>
+    </div>
+
+    </div>
+
+
+    <center>
+    <div className='w-80 mt-20 text-center'>
+        <Button text="View Case Studies" />
+    </div>
+    </center>
     </>
   )
 }
