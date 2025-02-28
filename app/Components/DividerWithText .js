@@ -5,7 +5,7 @@ const DividerWithText = () => {
   return (
     <div className="relative flex items-center my-4 mt-10">
       {/* Smaller HR */}
-      <hr className="md:w-32 w-24 border-gray-300" />
+      <hr className="md:w-32 w-12 border-gray-300" />
 
       <div className="flex flex-row md:flex-row items-center text-center bg-white px-3 whitespace-nowrap flex-shrink-0 gap-2 md:gap-3">
         {/* Stars */}
