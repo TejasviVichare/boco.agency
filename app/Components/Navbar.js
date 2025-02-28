@@ -45,7 +45,7 @@ const Navbar = () => {
 
              {/* Mobile Menu */}
              {isOpen && (
-                 <div className='md:hidden flex flex-col mt-4 justify-between space-y-4'>
+                 <div className='md:hidden flex flex-col mt-4 justify-between space-y-4 pl-2'>
                  <Link href="/" className='text-lg font-normal purple '>Shopify store build</Link>
                  <Link href="/" className='text-lg font-normal purple'>Landing page design</Link>
                  <Link href="/case-studies" className='text-lg font-normal purple'>Case studies</Link>
