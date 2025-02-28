@@ -125,7 +125,7 @@ const EnhancExp = () => {
       <center   key={index}>
       <div
       
-        className="p-2 border rounded-md mx-1 text-left" 
+        className="p-2 border rounded-md mx-1 text-left py-4" 
         style={{ backgroundColor: "#F4F1FF", border: "solid 1px #ddd1fa" }}
       >
         <Image
