@@ -8,7 +8,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import {bgImage} from '../../public/assets/backgroundimg.png'
 // Custom Next Arrow Component
 const NextArrow = ({ onClick }) => {
   return (
@@ -92,7 +92,7 @@ const EnhancExp = () => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:flex flex-row gap-6 justify-center mt-20">
+      <div className="hidden md:flex flex-row gap-6 justify-center mt-20" style={{backgroundImage:'/assets/backgroundimg.png'}}>
   {services.map((service, index) => (
     <div
       key={index}

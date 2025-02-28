@@ -48,7 +48,7 @@ const Navbar = () => {
                  <div className='md:hidden flex flex-col mt-4 justify-between space-y-4'>
                  <Link href="/" className='text-lg font-normal purple '>Shopify store build</Link>
                  <Link href="/" className='text-lg font-normal purple'>Landing page design</Link>
-                 <Link href="/" className='text-lg font-normal purple'>Case studies</Link>
+                 <Link href="/case-studies" className='text-lg font-normal purple'>Case studies</Link>
                 </div>               
              )}
 
