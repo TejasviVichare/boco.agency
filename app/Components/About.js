@@ -27,7 +27,7 @@ const About = () => {
         </ul>
         
         {/* Buttons */}
-        <div className="w-full flex flex-col-reverse md:flex-row mt-10 md:mt-16 gap-5 text-left justify-start">
+        <div className="w-full flex flex-col-reverse md:flex-row mt-10 md:mt-10 gap-5 text-left justify-start">
         <div className="hidden md:flex">
             <Button text="Audit your Website"  />
           </div>
