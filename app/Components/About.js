@@ -12,7 +12,7 @@ const About = () => {
     <div className="w-full flex flex-col-reverse md:flex-row items-start justify-start h-full">
       
       {/* Left Section (Content) */}
-      <div className="md:pl-36  flex flex-col items-start  justify-start h-full self-start md:pt-36" >
+      <div className="md:pl-36  flex flex-col items-start  justify-start h-full self-start md:pt-28" >
         <Heading heading="We build high-converting Shopify stores that drive Profit" />
         
         <p className="pt-2 font-medium purple text-lg md:text-xl">
