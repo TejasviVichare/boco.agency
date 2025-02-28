@@ -14,10 +14,10 @@ const NextArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="absolute -bottom-9 right-10   p-2 px-3 rounded-full " style={{backgroundColor:'rgb(211, 195, 248)'}}
+      className="absolute -bottom-11 right-10   p-2 px-3 rounded-full  " style={{backgroundColor:'rgb(211, 195, 248)'}}
     >
-             &#8594;
-
+            
+            &#8594;
     </button>
   );
 };
@@ -27,9 +27,9 @@ const PrevArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="absolute -bottom-9 right-20  p-2 px-3 rounded-full " style={{backgroundColor:'rgb(211, 195, 248)'}}
+      className="absolute -bottom-11  right-24  p-2 px-3 rounded-full " style={{backgroundColor:'rgb(211, 195, 248)'}}
     >
-      &#8592;
+         &#8592;
     </button>
   );
 };
@@ -97,7 +97,7 @@ const EnhancExp = () => {
     <div
       key={index}
       className="p-4 border rounded-md w-96"  // Ensure equal width
-      style={{ backgroundColor: "#F4F1FF", border: "solid 1px #ddd1fa" }}
+      style={{ backgroundColor: "#F4F1FF", border: "solid 1px #ddd1fa"  }}
     >
       <Image
         src={service.image}
@@ -118,30 +118,37 @@ const EnhancExp = () => {
   ))}
 </div>
 
-      {/* Mobile Slider View */}
-      <div className="md:hidden mt-10 relative">
-        <Slider {...settings}>
-          {services.map((service, index) => (
-            <div key={index} className="p-4 border rounded-md mx-8 gap-5"  style={{ backgroundColor: "#d3c3f8" , border: "solid 1px #ddd1fa" }}>
-              <Image
-                src={service.image}
-                alt="Service Image"
-                width={180}
-                height={180}
-                className="mb-4 mx-auto"
-              />
-              <Heading heading={<span className="text-3xl">{service.title}</span>} />
-              <ul className="pt-5 purple text-lg md:text-xl pl-2 md:pl-4">
-                {service.features.map((feature, i) => (
-                  <li key={i} style={{ fontSize: "17px" }}>
-                    <span className="text-purple-400 pr-2">&#10003;</span> {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
+    {/* Mobile Slider View */}
+<div className="md:hidden mt-10 relative px-4 mr-4">
+  <Slider {...settings}>
+    {services.map((service, index) => (
+      <center   key={index}>
+      <div
+      
+        className="p-2 border rounded-md mx-1 text-left" 
+        style={{ backgroundColor: "#F4F1FF", border: "solid 1px #ddd1fa" }}
+      >
+        <Image
+          src={service.image}
+          alt="Service Image"
+          width={180}
+          height={180}
+          className="mb-4 mx-auto"
+        />
+        <Heading heading={<span className="text-3xl">{service.title}</span>} />
+        <ul className="pt-5 purple text-lg md:text-xl pl-2 md:pl-4">
+          {service.features.map((feature, i) => (
+            <li key={i} style={{ fontSize: "17px" }}>
+              <span className="text-purple-400 pr-2">&#10003;</span> {feature}
+            </li>
           ))}
-        </Slider>
+        </ul>
       </div>
+      </center>
+    ))}
+  </Slider>
+</div>
+
     </div>
   );
 };

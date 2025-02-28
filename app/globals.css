@@ -86,3 +86,11 @@ body {
     right: -30px;
   }
 }
+
+.slick-slide {
+  padding: 0 10px !important; /* Adjust spacing */
+}
+
+.slick-list {
+  margin: 0 -10px; /* Counteracts padding for proper alignment */
+}
