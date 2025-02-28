@@ -14,7 +14,7 @@ const Page = () => {
         <Heading heading="Success Stories & Results"/>
       </div>
       <div className='md:px-32'>
-       <p className='md:text-2xl text-base text-left mt-7' style={{color:'#140152'}}>We've worked with nearly 100 brands in different modes and capacities over the years. Here's a few of our favorite success stories.</p>
+       <p className='md:text-2xl text-base text-left mt-7 px-2' style={{color:'#140152'}}>We've worked with nearly 100 brands in different modes and capacities over the years. Here's a few of our favorite success stories.</p>
       </div>
        <CaseStudies />
 
