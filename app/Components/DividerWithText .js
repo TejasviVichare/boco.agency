@@ -3,7 +3,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const DividerWithText = () => {
   return (
-    <div className="relative flex items-center my-4">
+    <div className="relative flex items-center my-4 mt-10">
       {/* Smaller HR */}
       <hr className="w-32 border-gray-300" />
 
