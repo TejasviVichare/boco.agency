@@ -6,13 +6,13 @@ import ElevateMobile from '../../public/assets/elevate-everyday-mobile.png'
 import Heading from './Heading'
 import Button from './Button'
 import Talktous from './Talktous'
-
+import AuditButton from './AuditButton'
 const About = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-start justify-start h-full">
+    <div className="w-full flex flex-col-reverse md:flex-row items-start justify-start h-full">
       
       {/* Left Section (Content) */}
-      <div className="md:pl-20 px-2 flex flex-col items-start justify-start h-full self-start md:pt-36">
+      <div className="md:pl-36  flex flex-col items-start  justify-start h-full self-start md:pt-36" >
         <Heading heading="We build high-converting Shopify stores that drive Profit" />
         
         <p className="pt-2 font-medium purple text-lg md:text-xl">
@@ -27,8 +27,13 @@ const About = () => {
         </ul>
         
         {/* Buttons */}
-        <div className="w-full flex flex-col-reverse md:flex-row mt-10 md:mt-16 gap-5 text-center justify-center">
-          <Button text="Audit My Website" />
+        <div className="w-full flex flex-col-reverse md:flex-row mt-10 md:mt-16 gap-5 text-left justify-start">
+        <div className="hidden md:flex">
+            <Button text="Audit your Website"  />
+          </div>
+          <div  className="flex md:hidden w-full">
+            <AuditButton />
+          </div>
           <Talktous text="Talk to Us" />
         </div>
       </div>
@@ -37,8 +42,8 @@ const About = () => {
         <Image src={ElevateMobile} alt="IMAGE" className="w-full max-w-md md:max-w-full" />
       </div>
       {/* Right Section (Image) */}
-      <div className="hidden md:p-10 pt-3 w-full md:flex justify-center">
-        <Image src={Elevate} alt="IMAGE" className="w-full max-w-md md:max-w-full" />
+      <div className="hidden    pt-3 w-full md:flex justify-end">
+        <Image src={Elevate} alt="IMAGE" style={{width:'75%'}} />
       </div>
     </div>
   )

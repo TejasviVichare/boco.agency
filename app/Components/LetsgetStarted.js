@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from './Heading'
 import Button from './Button'
 import Talktous from './Talktous'
+import AuditButton from './AuditButton'
 
 const LetsgetStarted = () => {
   return (
@@ -14,7 +15,12 @@ const LetsgetStarted = () => {
         {/* Buttons */}
         <div className="w-full flex  md:flex-row flex-col mt-10 md:mt-16 gap-5 text-center justify-center">
           <Talktous text="Book a Call" />
-          <Button text="Audit your Website" />
+          <div className="hidden md:flex">
+            <Button text="Audit your Website"  />
+          </div>
+          <div  className="flex md:hidden">
+            <AuditButton />
+          </div>
         </div>
     </div>
   )
