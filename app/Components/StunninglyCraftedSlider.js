@@ -3,20 +3,36 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState, useEffect } from "react";
 
-
-const images =[
-    '/assets/StunninglyCrafted/1.png',
-    '/assets/StunninglyCrafted/2.png',
-    '/assets/StunninglyCrafted/3.png',
-    '/assets/StunninglyCrafted/4.png',
-    '/assets/StunninglyCrafted/5.png',
-    '/assets/StunninglyCrafted/6.png',
-    '/assets/StunninglyCrafted/7.png',
-    '/assets/StunninglyCrafted/8.png',
-]
 
 const StunninglyCraftedSlider = () => {
+
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    async function fetchImages() {
+      try {
+        const res = await fetch("http://localhost:1337/api/imagesliders?populate=*");
+        const data = await res.json();
+
+        if (data.data) {
+          setImages(
+            data.data.flatMap((item) =>
+              item.image?.map((img) => ({
+                id: img.id,
+                url: `http://localhost:1337${img.url}`,
+              })) || []
+            )
+          );
+        }
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    }
+
+    fetchImages();
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -52,11 +68,15 @@ const StunninglyCraftedSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {images.map((src, index) => (
-          <div key={index} className="image-slide">
-            <img src={src} alt={`Slide ${index}`} className="slider-img" />
-          </div>
-        ))}
+         {images.length > 0 ? (
+          images.map((img) => (
+            <div key={img.id} className="image-slide">
+             <img  src={img.url} alt="Slider" className="slider-img" />
+            </div>
+          ))
+        ) : (
+          <p>Loading images or no images found...</p>
+        )}
       </Slider>
     </div>
   )
